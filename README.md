@@ -1,14 +1,10 @@
 # Cryptiq – AI Crypto Portfolio Telegram Bot
-<<<<<<< HEAD
 
 [![MIT License](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
 [![Python](https://img.shields.io/badge/python-3.8%2B-blue.svg)](https://www.python.org/downloads/)
 [![Build Status](https://img.shields.io/badge/build-passing-brightgreen.svg)]()
 [![Telegram](https://img.shields.io/badge/telegram-bot-blue.svg?logo=telegram)](https://t.me/yourbotusername)
 
-=======
-(I was lazy so a lot of the documentation was written with AI)
->>>>>>> 46501b3996c33302fddcd33840c86067345a3cb2
 ---
 
 ## 🚧 EARLY DEVELOPMENT NOTICE
