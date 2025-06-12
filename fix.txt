@@ -1,0 +1,47 @@
+user data catagories dont match up
+
+timezone doesnt work on graphs just says name of timezone not the date or time
+
+the menu buttons dont work for portfolio but /portfolio works
+
+start separating all the code to make it easier to debug and more organized
+
+have the terminal not output the http requests
+
+get ready to have actual people use it
+
+Refactor & Organize Code
+
+Split code into logical modules (e.g., handlers.py, utils.py, database.py, keyboards.py, main.py).
+Remove unused code and add comments/docstrings.
+Fix Known Issues
+
+Ensure user data categories are consistent.
+Fix timezone handling (show actual date/time, not just the name).
+Make sure all menu buttons work as expected.
+Suppress or properly log HTTP requests in the terminal.
+Testing
+
+Test all features (commands, buttons, error handling) with multiple users.
+Handle edge cases and invalid input gracefully.
+Security & Privacy
+
+Secure API keys and sensitive data.
+Add privacy policy if storing user data.
+Validate and sanitize all user input.
+Deployment Readiness
+
+Set up logging and error reporting.
+Use environment variables for secrets.
+Prepare for scaling (consider using a database, not just files).
+Documentation
+
+Write a README with setup, usage, and support info.
+Document commands and features for users.
+Bot Settings
+
+Set a clear bot description, profile photo, and commands in BotFather.
+Backup & Monitoring
+
+Set up regular backups for user data.
+Monitor uptime and errors.

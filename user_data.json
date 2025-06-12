@@ -1,0 +1,14 @@
+{
+  "users": {
+    "5944995369": {
+      "holdings": {
+        "btc": 0.5
+      },
+      "strategy": "590",
+      "risk_tolerance": "hours",
+      "time_horizon": "advanced",
+      "experience": "Los_Angeles",
+      "timezone": "Los_Angeles"
+    }
+  }
+}
