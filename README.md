@@ -1,5 +1,5 @@
 # Cryptiq – AI Crypto Portfolio Telegram Bot
-
+(I was lazy so a lot of the documentation was written with AI)
 ---
 
 ## 🚧 EARLY DEVELOPMENT NOTICE
