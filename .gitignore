@@ -26,3 +26,6 @@ Thumbs.db
 # Ignore backups
 *.bak
 *.tmp
+
+# Ignore development notes
+fix.txt
