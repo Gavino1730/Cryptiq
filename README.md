@@ -28,7 +28,7 @@
 
 1. **Clone the repo:**
    ```sh
-   git clone https://github.com/yourusername/cryptiq.git
+   git clone https://github.com/gavino1730/cryptiq.git
    cd cryptiq
    ```
 
