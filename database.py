@@ -1,5 +1,8 @@
 """
-database.py - Handles all persistent data storage and retrieval for Cryptiq bot.
+database.py
+
+Handles persistent storage and retrieval of user data, alerts, and chat logs for Cryptiq bot.
+All data is stored in local JSON files. For production/scaling, migrate to a real database.
 """
 import os
 import json
