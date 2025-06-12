@@ -15,8 +15,12 @@ from telegram.ext import Application, CommandHandler, MessageHandler, filters, C
 from telegram import InlineKeyboardButton, InlineKeyboardMarkup, ReplyKeyboardMarkup
 
 # Set your tokens here
-TELEGRAM_TOKEN = "7351889876:AAFPnDcmnwPEyRyyTkaVQ51TDCF2QXLwxvc"
-OPENAI_API_KEY = "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"
+TELEGRAM_TOKEN = os.environ.get("TELEGRAM_TOKEN")
+OPENAI_API_KEY = os.environ.get("OPENAI_API_KEY")
+if TELEGRAM_TOKEN is None or OPENAI_API_KEY is None:
+    raise RuntimeError("TELEGRAM_TOKEN and OPENAI_API_KEY must be set as environment variables.")
+TELEGRAM_TOKEN = str(TELEGRAM_TOKEN)
+OPENAI_API_KEY = str(OPENAI_API_KEY)
 openai.api_key = OPENAI_API_KEY
 
 COINGECKO_API = "https://api.coingecko.com/api/v3/simple/price?ids=bitcoin%2Clitecoin&vs_currencies=usd&include_24hr_change=true"
