@@ -14,73 +14,216 @@
 
 ---
 
+## What is Cryptiq?
+
+Cryptiq is a Telegram bot that helps you track your crypto portfolio, get real-time prices, set price alerts, and more—all from inside Telegram. It uses AI to provide insights and supports multiple languages.
+
+---
+
 ## Features
 
-- Track your crypto portfolio
+- Track your crypto portfolio and bank balance
 - Get real-time prices and news
 - Set price alerts
 - AI-powered market analysis (experimental)
 - Multi-language support
+- Privacy-focused: your data is private
 
 ---
 
-## Setup
+## Getting Started
 
-1. **Clone the repo:**
+### 1. **Clone the Repository**
+
+If you don’t have git, [download it here](https://git-scm.com/downloads).
+
+Open a terminal (Command Prompt, PowerShell, or Terminal) and run:
+```sh
+git clone https://github.com/yourusername/cryptiq.git
+cd cryptiq
+```
+
+### 2. **Install Python**
+
+Make sure you have Python 3.8 or newer.  
+[Download Python here](https://www.python.org/downloads/).
+
+Check your Python version:
+```sh
+python --version
+```
+or
+```sh
+python3 --version
+```
+
+### 3. **Install Required Libraries**
+
+Install the required Python packages:
+```sh
+pip install -r requirements.txt
+```
+If you get an error, try:
+```sh
+python -m pip install -r requirements.txt
+```
+
+### 4. **Set Up Environment Variables**
+
+1. Copy the example environment file:
    ```sh
-   git clone https://github.com/gavino1730/cryptiq.git
-   cd cryptiq
+   copy .env.example .env
+   ```
+   (On Mac/Linux: `cp .env.example .env`)
+
+2. Open `.env` in a text editor and add your own API keys:
+   - `TELEGRAM_TOKEN` – Get this from [BotFather](https://t.me/botfather) on Telegram.
+   - `OPENAI_API_KEY` – Get this from [OpenAI](https://platform.openai.com/account/api-keys).
+
+   Example `.env`:
+   ```
+   TELEGRAM_TOKEN=your-telegram-bot-token-here
+   OPENAI_API_KEY=your-openai-api-key-here
    ```
 
-2. **Install dependencies:**
-   ```sh
-   pip install -r requirements.txt
-   ```
+### 5. **Run the Bot**
 
-3. **Set your API keys:**
-   - Edit `cryptiq_bot.py` and set your `TELEGRAM_TOKEN` and `OPENAI_API_KEY`.
-   - (Optional) Use environment variables for better security.
+Start the bot with:
+```sh
+python cryptiq_bot.py
+```
+or
+```sh
+python3 cryptiq_bot.py
+```
 
-4. **Run the bot:**
-   ```sh
-   python cryptiq_bot.py
-   ```
+You should see a message that the bot is running.
 
 ---
 
-## Usage
+## Using the Bot
 
-- Start the bot on Telegram with `/start`.
-- Use `/menu` to access the main menu with buttons.
-- Use `/portfolio` to view your portfolio.
-- Use `/setbank <amount>` and `/setholdings <coin> <amount>` to update your data.
-- Use `/setalert <coin> <price>` to set price alerts.
-- Use `/news` for the latest headlines.
-- Use `/help` for a list of commands.
+1. **Find your bot on Telegram** (search for the name you set up with BotFather).
+2. **Start a chat** and type `/start`.
+3. Use `/menu` to see the main menu with buttons.
+4. Use `/help` to see all commands.
 
 ---
 
-## Security & Privacy
+## Common Commands
 
-- API keys are required for Telegram and OpenAI.
-- User data is stored locally in JSON files by default.
-- For production, consider using a secure database and environment variables.
-- Never share your API keys publicly.
+| Command            | Description                                 |
+|--------------------|---------------------------------------------|
+| /start             | Start or reset your profile                 |
+| /portfolio         | Show your portfolio                         |
+| /setbank           | Set your bank balance                       |
+| /setholdings       | Set holdings for a coin                     |
+| /setstrategy       | Set your trading strategy                   |
+| /setalert          | Set a price alert                           |
+| /news              | Show latest crypto news                     |
+| /deleteprofile     | Delete your profile and data                |
+| /menu              | Show the main menu                          |
+| /settings          | Show and change settings                    |
+| /language          | Change your language                        |
+| /help              | Show help                                   |
+
+---
+
+## Troubleshooting
+
+- **Bot won’t start?**  
+  - Double-check your Python version and that you installed all requirements.
+  - Make sure your `.env` file is filled out correctly.
+- **Bot not responding in Telegram?**  
+  - Make sure the bot is running in your terminal.
+  - Check for errors in the terminal window.
+- **Still stuck?**  
+  - Open an issue on GitHub or contact the developer.
 
 ---
 
 ## Contributing
 
-Pull requests and suggestions are welcome! Please open an issue first to discuss changes.
+Pull requests and suggestions are welcome!  
+Please read [CONTRIBUTING.md](CONTRIBUTING.md) before submitting changes.
 
 ---
 
-## License
+## Documentation
 
-MIT License
+- [PRIVACY_POLICY.md](PRIVACY_POLICY.md) – How your data is handled
+- [LICENSE](LICENSE) – MIT License
+
+---
+
+## Security & Privacy
+
+- API keys are stored in `.env` (never share this file).
+- User data is stored locally and not shared.
+- You can delete your data at any time with `/deleteprofile`.
+
+---
+
+## For Developers
+
+- Code is organized into logical modules for easier debugging.
+- All secrets are loaded from environment variables.
+- Logging is enabled for error tracking.
+- See [CHANGELOG.md](CHANGELOG.md) for updates.
+
+---
+
+## Future Plans
+
+Cryptiq is under active development! Here’s what we’re planning for the future:
+
+- **Automated Trading:**  
+  Integrate with crypto exchanges so users can execute trades directly from the bot (with full user control and security).
+
+- **Predictions:**  
+  Use AI and statistical models to provide experimental price predictions and trend analysis (with clear disclaimers).
+
+- **Signals & Calls:**  
+  Offer automated or community-driven trade signals, alerts, and market calls.
+
+- **Portfolio Analytics:**  
+  More advanced analytics, including profit/loss tracking, historical performance, and risk metrics.
+
+- **Multi-Exchange Support:**  
+  Connect and track balances across multiple exchanges and wallets.
+
+- **DeFi & NFT Tracking:**  
+  Support for DeFi positions and NFT holdings.
+
+- **Customizable Alerts:**  
+  More flexible alerting (e.g., by percentage change, volume, or news events).
+
+- **Better Charting:**  
+  Interactive and more detailed charts for portfolio and market data.
+
+- **Community Features:**  
+  Leaderboards, sharing, and group portfolio competitions.
+
+- **Web, Desktop, and Mobile Apps:**  
+  Cryptiq will eventually become available as a full-featured web app, desktop software, and mobile app for iOS and Android, making it even easier to manage your crypto portfolio anywhere.
+
+---
+
+**Have a feature request or idea?**  
+Open an issue or discussion on GitHub!
 
 ---
 
 ## Disclaimer
 
 Cryptiq does **not** offer financial advice. All information is for educational purposes only.
+
+---
+
+## Need Help?
+
+If you have any questions, open an issue on GitHub or contact the developer.
+
+---
+
+**Enjoy using Cryptiq!**
