@@ -21,9 +21,9 @@ app = Application.builder().token(TELEGRAM_TOKEN).job_queue(job_queue).build()
 app.add_handler(CommandHandler("start", handlers.start))           # Onboarding and main menu
 app.add_handler(CommandHandler("help", handlers.help_command))     # Show help and command list
 app.add_handler(CommandHandler("portfolio", handlers.show_portfolio)) # Show user's portfolio
-app.add_handler(CommandHandler("setbank", handlers.set_bank))      # Set user's bank balance
-app.add_handler(CommandHandler("setholdings", handlers.set_holdings)) # Set user's crypto holdings
-app.add_handler(CommandHandler("setstrategy", handlers.set_strategy)) # Set user's trading strategy
+# app.add_handler(CommandHandler("setbank", handlers.set_bank))      # Set user's bank balance
+# app.add_handler(CommandHandler("setholdings", handlers.set_holdings)) # Set user's crypto holdings
+# app.add_handler(CommandHandler("setstrategy", handlers.set_strategy)) # Set user's trading strategy
 app.add_handler(CommandHandler("setalert", handlers.set_alert))    # Set price alerts
 app.add_handler(CommandHandler("news", handlers.news))             # Show latest crypto news
 app.add_handler(CommandHandler("deleteprofile", handlers.delete_profile)) # Delete user profile and data
